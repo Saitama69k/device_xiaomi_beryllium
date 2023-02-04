@@ -24,3 +24,7 @@ rm -rf hardware/qcom-caf/sdm845/media
 git clone https://github.com/ArrowOS/android_hardware_qcom_media -b arrow-12.1-caf-sdm845 hardware/qcom-caf/sdm845/media
 rm -rf external/tinyxml
 git clone https://github.com/ArrowOS/android_external_tinyxml -b arrow-13.0 external/tinyxml
+
+#Clone Hardware
+rm -rf hardware/xiaomi
+git clone https://github.com/Dooms-v/hardware.git -b arrow-13.0 hardware/xiaomi
