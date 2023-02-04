@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/octavi_beryllium.mk
+    $(LOCAL_DIR)/spark_beryllium.mk
 
 COMMON_LUNCH_CHOICES := \
-    octavi_beryllium-user \
-    octavi_beryllium-userdebug \
-    octavi_beryllium-eng
+    spark_beryllium-user \
+    spark_beryllium-userdebug \
+    spark_beryllium-eng
