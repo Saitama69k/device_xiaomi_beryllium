@@ -6,37 +6,26 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# riceDroid Stuff with GApps
-TARGET_USE_PIXEL_FINGERPRINT := true
-SUSHI_BOOTANIMATION  := 1080
-TARGET_ENABLE_BLUR := false
+# Inherit some common octavi stuff.
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
-
-
-# Aperture Camera
-TARGET_BUILD_APERTURE_CAMERA := true
-
-# Gapps-**
-WITH_GMS := true
-TARGET_CORE_GMS := true
-TARGET_CORE_GMS_EXTRAS := true
-TARGET_OPTOUT_GOOGLE_TELEPHONY := true
-
-# FaceUnlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
+EXTRA_UDFPS_ANIMATIONS := false
+IS_PHONE := true
 
-# AudioFx
-TARGET_EXCLUDES_AUDIOFX := true
+# Maintainer Flag
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.octavi.maintainer=LEO
 
-# Maintainer Stuff
-RICE_MAINTAINER := FINNAIB&SHIKHAR
-RICE_OFFICIAL := false
+# Unofficial
+OCTAVI_MAINTAINER := LEO
+OCTAVI_BUILD_TYPE := UNOFFICIAL
+BUILD_USERNAME := LEO
+BUILD_HOSTNAME := Octavi
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_beryllium
+PRODUCT_NAME := octavi_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
