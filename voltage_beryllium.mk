@@ -16,12 +16,12 @@ IS_PHONE := true
 
 # Maintainer Flag
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.voltage.maintainer=LEO
+    ro.voltage.maintainer=Akshat
 
 # Unofficial
-voltage_MAINTAINER := LEO
+voltage_MAINTAINER := Akshat
 voltage_BUILD_TYPE := UNOFFICIAL
-BUILD_USERNAME := LEO
+BUILD_USERNAME := Akshat
 BUILD_HOSTNAME := voltage
 
 # Device identifier. This must come after all inclusions.
