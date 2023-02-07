@@ -27,4 +27,4 @@ git clone https://github.com/ArrowOS/android_external_tinyxml -b arrow-13.0 exte
 
 #Clone Hardware
 rm -rf hardware/xiaomi
-git clone https://github.com/Saitama69k/hardware.git -b thirteen hardware/xiaomi
+git clone https://github.com/Saitama69k/hardware_xiaomi.git -b thirteen hardware/xiaomi
