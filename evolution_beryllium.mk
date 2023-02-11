@@ -6,8 +6,8 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common spark stuff.
-$(call inherit-product, vendor/spark/config/common_full_phone.mk)
+# Inherit some common evolution stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -16,16 +16,16 @@ IS_PHONE := true
 
 # Maintainer Flag
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.spark.maintainer=Akshat
+    ro.evolution.maintainer=Akshat
 
 # Unofficial
-SPARK_MAINTAINER := Akshat
-SPARK_BUILD_TYPE := UNOFFICIAL
+EVOLUTION_MAINTAINER := Akshat
+EVOLUTION_BUILD_TYPE := UNOFFICIAL
 BUILD_USERNAME := Akshat
-BUILD_HOSTNAME := Spark
+BUILD_HOSTNAME := Evolution
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := spark_beryllium
+PRODUCT_NAME := evolution_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
