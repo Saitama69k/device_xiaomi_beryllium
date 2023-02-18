@@ -6,27 +6,33 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common spark stuff.
+$(call inherit-product, vendor/spark/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_UDFPS_ANIMATIONS := false
 IS_PHONE := true
-
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_BUILD_APERTURE_CAMERA := true
+TARGET_BUILD_GRAPHENEOS_CAMERA := false
+TARGET_ENABLE_BLUR := false
+WITH_GAPPS := true
 
 # Maintainer Flag
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.aosp.maintainer=Akshat
+    ro.spark.maintainer=Akshat
 
 # Unofficial
-AOSP_MAINTAINER := Akshat
-AOSP_BUILD_TYPE := UNOFFICIAL
+SPARK_MAINTAINER := Akshat
+SPARK_BUILD_TYPE := UNOFFICIAL
 BUILD_USERNAME := Akshat
-BUILD_HOSTNAME := Aosp
+BUILD_HOSTNAME := Spark
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_beryllium
+PRODUCT_NAME := spark_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
