@@ -7,11 +7,14 @@
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
 # Inherit some common ricedroid stuff.
-$(call inherit-product, vendor/ricedroid/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+RICE_CHIPSET := "snapdragon 845"
+RICE_MAINTAINER := "Akshat"
+RICE_PACKAGE_TYPE := "VANILLA AOSP"
+SUSHI_BOOTANIMATION := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-EXTRA_UDFPS_ANIMATIONS := false
+TARGET_HAS_UDFPS := false
 IS_PHONE := true
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
