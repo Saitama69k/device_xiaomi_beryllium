@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ricedroid_beryllium.mk
+    $(LOCAL_DIR)/lineage_beryllium.mk
 
 COMMON_LUNCH_CHOICES := \
-    ricedroid_beryllium-user \
-    ricedroid_beryllium-userdebug \
-    ricedroid_beryllium-eng
+    lineage_beryllium-user \
+    lineage_beryllium-userdebug \
+    lineage_beryllium-eng
