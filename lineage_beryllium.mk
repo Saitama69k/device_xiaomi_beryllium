@@ -6,34 +6,29 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common ricedroid stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-RICE_CHIPSET := "snapdragon 845"
-RICE_MAINTAINER := "Akshat"
-RICE_PACKAGE_TYPE := "VANILLA AOSP"
-SUSHI_BOOTANIMATION := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_HAS_UDFPS := false
-IS_PHONE := true
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_BUILD_APERTURE_CAMERA := true
-TARGET_BUILD_GRAPHENEOS_CAMERA := false
+
+# riceDroid Stuff
+TARGET_USE_PIXEL_FINGERPRINT := true
+SUSHI_BOOTANIMATION  := 1080
 TARGET_ENABLE_BLUR := false
+TARGET_SUPPORTS_QUICK_TAP := true
 
-# Maintainer Flag
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.ricedroid.maintainer=Akshat
+# FaceUnlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# Unofficial
-RICEDROID_MAINTAINER := Akshat
-RICEDROID_BUILD_TYPE := UNOFFICIAL
-BUILD_USERNAME := Akshat
-BUILD_HOSTNAME := Ricedroid
+# AudioFx
+TARGET_EXCLUDES_AUDIOFX := true
+
+# Aperture Camera
+TARGET_BUILD_APERTURE_CAMERA := true
+
+# Maintainer Stuff
+RICE_MAINTAINER := Akshat
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := ricedroid_beryllium
+PRODUCT_NAME := lineage_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
