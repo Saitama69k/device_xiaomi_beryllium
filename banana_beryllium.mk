@@ -6,30 +6,19 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common bananadroid stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common banana stuff.
+$(call inherit-product, vendor/banana/config/common_full_phone.mk)
+
+# Other stuff
+BANANA_MAINTAINER := Akshat
+BANANA_BUILD_TYPE := UNOFFICIAL
+WITH_GAPPS := false
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-EXTRA_UDFPS_ANIMATIONS := false
-IS_PHONE := true
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_ENABLE_BLUR := false
 
-# Maintainer Flag
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.bananadroid.maintainer=Akshat
-
-# Unofficial
-BANANADROID_MAINTAINER := Akshat
-BANANADROID_BUILD_TYPE := UNOFFICIAL
-BUILD_USERNAME := Akshat
-BUILD_HOSTNAME := Bananadroid
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := bananadroid_beryllium
+PRODUCT_NAME := banana_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
