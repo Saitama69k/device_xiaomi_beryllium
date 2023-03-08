@@ -7,7 +7,7 @@
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
 # Inherit some common banana stuff.
-$(call inherit-product, vendor/banana/config/common_full_phone.mk)
+$(call inherit-product, vendor/banana/config/common.mk)
 
 # Other stuff
 BANANA_MAINTAINER := Akshat
